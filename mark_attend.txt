@@ -1,0 +1,36 @@
+package attendence;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class absent {
+    JLabel label=new JLabel("MARK ATTENDENCE");
+    JButton b1=new JButton("PRESENT");
+
+    JButton b2=new JButton("ABSENT");
+    public absent(){
+        JFrame JFrame = new JFrame();
+        JFrame frame=new JFrame("Attendence management");
+
+
+        label.setBounds(600,200,500,40);
+        label.setFont(new Font("normal", Font.BOLD, 20));
+        frame.add(label);
+
+
+
+        b1.setBounds(450,300,200,50);
+        b1.setFont(new Font("normal", Font.BOLD, 20));
+        frame.add(b1);
+
+        b2.setBounds(750,300,200,50);
+        b2.setFont(new Font("normal", Font.BOLD, 20));
+        frame.add(b2);
+
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(1500,1500);
+        frame.setLayout(null);
+        frame.setVisible(true);
+    }
+}
