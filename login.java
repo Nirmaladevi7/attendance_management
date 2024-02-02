@@ -74,21 +74,20 @@ public class login {
         frame.setVisible(true);
     }
 
-    private boolean authenticateUser(String username, String password) {
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_use", "root", "root")) {
-            String query = "SELECT * FROM users WHERE username = ? AND password = ?";
-            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-                preparedStatement.setString(1, username);
-                preparedStatement.setString(2, password);
+   // private boolean authenticateUser(String username, String password) {
+       // try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_use", "root", "root")) {
+           // String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+            //try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+              //  preparedStatement.setString(1, username);
+                //preparedStatement.setString(2, password);
 
                 // Execute the query and check if a matching record exists
-                return preparedStatement.executeQuery().next();
-            }
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-            return false;
-        }
-    }
+                //return preparedStatement.executeQuery().next();
+           // }
+        //} catch (SQLException ex) {
+          //  ex.printStackTrace();
+            //return false;
+       // }}
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new login());
